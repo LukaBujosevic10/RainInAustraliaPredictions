@@ -1,0 +1,8 @@
+/*/*
+# ...osim foldera InputData i notebooks
+
+!/InputData/
+!/InputData/**
+!/notebooks/
+!/notebooks/**
+!/reports/tacka_rose.csv
