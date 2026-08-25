@@ -80,6 +80,6 @@ Kao logičan sledeći korak, ima smisla probati sa dodatnim spoljnim podacima (s
 
 Pored same analize i treniranja modela, napravili smo i produkcionu verziju celog pipeline-a koristeći Apache Airflow, kao vežbu automatizacije data science procesa od kraja do kraja. Taj deo je odvojen u sopstveni projekat:
 
-**[`../weatheraus-airflow`](../weatheraus-airflow/README.md)**
+**[`../weatheraus-airflow`](https://github.com/LukaBujosevic10/weatheraus-airflow)**
 
 Tamo se nalazi kompletno uputstvo za pokretanje (Docker/Docker Compose), definisan DAG koji redom pokreće produkcioni podskup svezaka, MLflow za praćenje eksperimenata i model registry, FastAPI servis za serviranje predikcija (hvata stvarne podatke današnjeg dana sa australijskih stanica) i Streamlit aplikacija sa mapom stanica. Sam Airflow, njegovo korišćenje i specifičnosti su detaljno opisane u njegovom README.md.
