@@ -12,7 +12,6 @@ Da bi se `FinalDocument.ipynb` mogao izvršiti od početka do kraja, potrebno je
 
 - **Python okruženje** - sve biblioteke koje sveska koristi (pandas, numpy, scikit-learn, xgboost, mlflow, networkx, openpyxl, seaborn/matplotlib...) navedene su u `req/requirements.txt`; prva ćelija sveske (`pip install -r req/requirements.txt`) ih instalira automatski. Za tačne verzije koje smo koristili pogledati taj fajl.
 - **Ulazni podaci** - potrebno je da u `InputData/` postoje `weatherAUS.csv` (Rain in Australia sa Kaggle-a) i `stations.txt` (spisak meteoroloških stanica sa bom.gov.au/climate/data/lists_by_element/stations.txt), a u `GeoPodaci/` fajl sa razdaljinama između stanica koji se koristi za prostorne atribute i imputaciju.
-- **Docker** - MLflow tracking server (port 5000) i, u produkcionom delu, serving kontejner (port 5001) i CORS proxy (port 8081) pokreću se iz same sveske preko `docker run` komandi, pa je potreban lokalno pokrenut Docker.
 - **Redosled izvršavanja** - ćelije treba pokretati redom odozgo nadole; svaka faza čuva svoj rezultat u `backups/` kao csv, a naredna faza ga učitava, tako da se sveska ne sme pokretati isečke van redosleda niti paralelno.
 
 ## Organizacija projekta
@@ -78,7 +77,7 @@ Kao logičan sledeći korak, ima smisla probati sa dodatnim spoljnim podacima (s
 
 ## Airflow
 
-Pored same analize i treniranja modela, napravili smo i produkcionu verziju celog pipeline-a koristeći Apache Airflow, kao vežbu automatizacije data science procesa od kraja do kraja. Taj deo je odvojen u sopstveni projekat:
+Pored same analize i treniranja modela, napravili smo i produkcionu verziju celog pipeline-a koristeći Apache Airflow, kao demonstraciju automatizacije data science procesa. Taj deo je odvojen u sopstveni projekat:
 
 **[`../weatheraus-airflow`](https://github.com/LukaBujosevic10/weatheraus-airflow)**
 
